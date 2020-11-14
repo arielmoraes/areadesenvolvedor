@@ -9544,6 +9544,18 @@ A informação de quais possibilidades estarão disponíveis (<em>query paramete
                       </span><span class="p">{</span><span class="w">
                         </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
                         </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1500"</span><span class="w">
+                      </span><span class="p">},</span><span class="w">
+                      </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.3500"</span><span class="w">
+                      </span><span class="p">},</span><span class="w">
+                      </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.2000"</span><span class="w">
+                      </span><span class="p">},</span><span class="w">
+                      </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.3000"</span><span class="w">
                       </span><span class="p">}</span><span class="w">
                     </span><span class="p">]</span><span class="w">
                   </span><span class="p">}</span><span class="w">
@@ -9551,26 +9563,6 @@ A informação de quais possibilidades estarão disponíveis (<em>query paramete
               </span><span class="p">],</span><span class="w">
               </span><span class="nl">"interest"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                 </span><span class="nl">"feeRate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                  </span><span class="nl">"prices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                    </span><span class="p">{</span><span class="w">
-                      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1_QUARTIL_CLIENTES"</span><span class="p">,</span><span class="w">
-                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0987"</span><span class="w">
-                    </span><span class="p">},</span><span class="w">
-                    </span><span class="p">{</span><span class="w">
-                      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2_QUARTIL_CLIENTES"</span><span class="p">,</span><span class="w">
-                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1600"</span><span class="w">
-                    </span><span class="p">},</span><span class="w">
-                    </span><span class="p">{</span><span class="w">
-                      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3_QUARTIL_CLIENTES"</span><span class="p">,</span><span class="w">
-                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.3600"</span><span class="w">
-                    </span><span class="p">},</span><span class="w">
-                    </span><span class="p">{</span><span class="w">
-                      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4_QUARTIL_CLIENTES"</span><span class="p">,</span><span class="w">
-                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.5890"</span><span class="w">
-                    </span><span class="p">}</span><span class="w">
-                  </span><span class="p">],</span><span class="w">
-                  </span><span class="nl">"minimumRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0845"</span><span class="p">,</span><span class="w">
-                  </span><span class="nl">"maximumRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.9000"</span><span class="p">,</span><span class="w">
                   </span><span class="nl">"fees"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                     </span><span class="p">{</span><span class="w">
                       </span><span class="nl">"referentialRateOrIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PRE_FIXADO"</span><span class="w">
@@ -9581,34 +9573,46 @@ A informação de quais possibilidades estarão disponíveis (<em>query paramete
                       </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.10"</span><span class="w">
                     </span><span class="p">}</span><span class="w">
                   </span><span class="p">],</span><span class="w">
+                  </span><span class="nl">"prices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1_FAIXA_VALOR"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1500"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2_FAIXA_VALOR"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.2000"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3_FAIXA_VALOR"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.3500"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4_FAIXA_VALOR"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.6800"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                  </span><span class="p">],</span><span class="w">
+                  </span><span class="nl">"minimumRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0845"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"maximumRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.9000"</span><span class="p">,</span><span class="w">
                   </span><span class="nl">"customers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                     </span><span class="p">{</span><span class="w">
                       </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
                       </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1500"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.3500"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.2000"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.3000"</span><span class="w">
                     </span><span class="p">}</span><span class="w">
                   </span><span class="p">]</span><span class="w">
                 </span><span class="p">},</span><span class="w">
                 </span><span class="nl">"instalmentRate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                  </span><span class="nl">"prices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                    </span><span class="p">{</span><span class="w">
-                      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1_QUARTIL_CLIENTES"</span><span class="p">,</span><span class="w">
-                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0987"</span><span class="w">
-                    </span><span class="p">},</span><span class="w">
-                    </span><span class="p">{</span><span class="w">
-                      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2_QUARTIL_CLIENTES"</span><span class="p">,</span><span class="w">
-                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1600"</span><span class="w">
-                    </span><span class="p">},</span><span class="w">
-                    </span><span class="p">{</span><span class="w">
-                      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3_QUARTIL_CLIENTES"</span><span class="p">,</span><span class="w">
-                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.3600"</span><span class="w">
-                    </span><span class="p">},</span><span class="w">
-                    </span><span class="p">{</span><span class="w">
-                      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4_QUARTIL_CLIENTES"</span><span class="p">,</span><span class="w">
-                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.5890"</span><span class="w">
-                    </span><span class="p">}</span><span class="w">
-                  </span><span class="p">],</span><span class="w">
-                  </span><span class="nl">"minimumRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0845"</span><span class="p">,</span><span class="w">
-                  </span><span class="nl">"maximumRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.9000"</span><span class="p">,</span><span class="w">
                   </span><span class="nl">"fees"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                     </span><span class="p">{</span><span class="w">
                       </span><span class="nl">"referentialRateOrIndexer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PRE_FIXADO"</span><span class="w">
@@ -9619,10 +9623,43 @@ A informação de quais possibilidades estarão disponíveis (<em>query paramete
                       </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.10"</span><span class="w">
                     </span><span class="p">}</span><span class="w">
                   </span><span class="p">],</span><span class="w">
+                  </span><span class="nl">"prices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1_FAIXA_VALOR"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0987"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2_FAIXA_VALOR"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1600"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3_FAIXA_VALOR"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.3600"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4_FAIXA_VALOR"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.5890"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                  </span><span class="p">],</span><span class="w">
+                  </span><span class="nl">"minimumRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0845"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"maximumRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.9000"</span><span class="p">,</span><span class="w">
+
                   </span><span class="nl">"customers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                     </span><span class="p">{</span><span class="w">
                       </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
                       </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1500"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.3500"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.2000"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.3000"</span><span class="w">
                     </span><span class="p">}</span><span class="w">
                   </span><span class="p">]</span><span class="w">
                 </span><span class="p">},</span><span class="w">
@@ -9632,19 +9669,19 @@ A informação de quais possibilidades estarão disponíveis (<em>query paramete
                     </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NA"</span><span class="p">,</span><span class="w">
                     </span><span class="nl">"prices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                       </span><span class="p">{</span><span class="w">
-                        </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1_QUARTIL_CLIENTES"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1_FAIXA_VALOR"</span><span class="p">,</span><span class="w">
                         </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1500"</span><span class="w">
                       </span><span class="p">},</span><span class="w">
                       </span><span class="p">{</span><span class="w">
-                        </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2_QUARTIL_CLIENTES"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2_FAIXA_VALOR"</span><span class="p">,</span><span class="w">
                         </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.2000"</span><span class="w">
                       </span><span class="p">},</span><span class="w">
                       </span><span class="p">{</span><span class="w">
-                        </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3_QUARTIL_CLIENTES"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3_FAIXA_VALOR"</span><span class="p">,</span><span class="w">
                         </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.3500"</span><span class="w">
                       </span><span class="p">},</span><span class="w">
                       </span><span class="p">{</span><span class="w">
-                        </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4_QUARTIL_CLIENTES"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4_FAIXA_VALOR"</span><span class="p">,</span><span class="w">
                         </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.6800"</span><span class="w">
                       </span><span class="p">}</span><span class="w">
                     </span><span class="p">],</span><span class="w">
@@ -9664,6 +9701,18 @@ A informação de quais possibilidades estarão disponíveis (<em>query paramete
                       </span><span class="p">{</span><span class="w">
                         </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
                         </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1500"</span><span class="w">
+                      </span><span class="p">},</span><span class="w">
+                      </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.3500"</span><span class="w">
+                      </span><span class="p">},</span><span class="w">
+                      </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.2000"</span><span class="w">
+                      </span><span class="p">},</span><span class="w">
+                      </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.3000"</span><span class="w">
                       </span><span class="p">}</span><span class="w">
                     </span><span class="p">]</span><span class="w">
                   </span><span class="p">},</span><span class="w">
@@ -9672,19 +9721,19 @@ A informação de quais possibilidades estarão disponíveis (<em>query paramete
                     </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NA"</span><span class="p">,</span><span class="w">
                     </span><span class="nl">"prices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                       </span><span class="p">{</span><span class="w">
-                        </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1_QUARTIL_CLIENTES"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1_FAIXA_VALOR"</span><span class="p">,</span><span class="w">
                         </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1500"</span><span class="w">
                       </span><span class="p">},</span><span class="w">
                       </span><span class="p">{</span><span class="w">
-                        </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2_QUARTIL_CLIENTES"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2_FAIXA_VALOR"</span><span class="p">,</span><span class="w">
                         </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.2700"</span><span class="w">
                       </span><span class="p">},</span><span class="w">
                       </span><span class="p">{</span><span class="w">
-                        </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3_QUARTIL_CLIENTES"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3_FAIXA_VALOR"</span><span class="p">,</span><span class="w">
                         </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.4000"</span><span class="w">
                       </span><span class="p">},</span><span class="w">
                       </span><span class="p">{</span><span class="w">
-                        </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4_QUARTIL_CLIENTES"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"interval"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4_FAIXA_VALOR"</span><span class="p">,</span><span class="w">
                         </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.4100"</span><span class="w">
                       </span><span class="p">}</span><span class="w">
                     </span><span class="p">],</span><span class="w">
@@ -9704,6 +9753,18 @@ A informação de quais possibilidades estarão disponíveis (<em>query paramete
                       </span><span class="p">{</span><span class="w">
                         </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
                         </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1500"</span><span class="w">
+                      </span><span class="p">},</span><span class="w">
+                      </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.3500"</span><span class="w">
+                      </span><span class="p">},</span><span class="w">
+                      </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.2000"</span><span class="w">
+                      </span><span class="p">},</span><span class="w">
+                      </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4_FAIXA_CLIENTE"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"rate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.3000"</span><span class="w">
                       </span><span class="p">}</span><span class="w">
                     </span><span class="p">]</span><span class="w">
                   </span><span class="p">}</span><span class="w">
