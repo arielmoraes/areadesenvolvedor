@@ -514,6 +514,12 @@
                     <a href="#api-admin-sharedautomatedtellermachinesidentification" class="toc-h2 toc-link" data-title="SharedAutomatedTellerMachinesIdentification">SharedAutomatedTellerMachinesIdentification</a>
                   </li>
                   <li>
+                    <a href="#api-admin-sharedautomatedtellermachinespostaladdress" class="toc-h2 toc-link" data-title="SharedAutomatedTellerMachinesPostalAddress">SharedAutomatedTellerMachinesPostalAddress</a>
+                  </li>
+                  <li>
+                    <a href="#api-admin-geographiccoordinates" class="toc-h2 toc-link" data-title="GeographicCoordinates">GeographicCoordinates</a>
+                  </li>
+                  <li>
                     <a href="#api-admin-sharedautomatedtellermachinesservices" class="toc-h2 toc-link" data-title="SharedAutomatedTellerMachinesServices">SharedAutomatedTellerMachinesServices</a>
                   </li>
                   <li>
@@ -946,13 +952,16 @@
           <li>
             <a href="#guia-de-versionamento" class="toc-h1 toc-link" data-title="Guia de Versionamento">Guia de Versionamento</a>
           </li>
+          <li>
+            <a href="#suporte" class="toc-h1 toc-link" data-title="Suporte">Suporte</a>
+          </li>
       </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introducao'>Introdução</h1>
-<p>Este documento é o resultado do trabalho conjunto do GT da Convenção – Interfaces, formado por integrantes da ABBC, ABCD, Abecs, ABFintechs, Abipag, Abranet, Camara e-net, OCB, BACEN e Febraban, baseado na proposta inicial apresentada pela Febraban (Federação Brasileira de Bancos) para implementação do Sistema Financeiro Aberto no Brasil (Open Banking). A documentação a seguir visa estabelecer padrões de desenvolvimento de APIs por parte das instituições financeiras, instituições de pagamento e demais instituições autorizadas pelo Banco Central do Brasil, além de conter informações adicionais para melhor entendimento do uso dos dados disponibilizados.    </p>
+<p>Este documento é o resultado do trabalho conjunto do GT da Convenção – Interfaces, formado por integrantes da ABBC, ABCD, Abecs, ABFintechs, Abipag, Abranet, Camara e-net, OCB, BACEN e Febraban, baseado na proposta inicial apresentada pela Febraban (Federação Brasileira de Bancos) para implementação do Sistema Financeiro Aberto no Brasil (Open Banking). A documentação a seguir visa estabelecer padrões de desenvolvimento de APIs por parte das instituições financeiras, instituições de pagamento e demais instituições autorizadas pelo Banco Central do Brasil, além de conter informações adicionais para melhor entendimento do uso dos dados disponibilizados.</p>
 
 <p>Nossa proposta tem como base o modelos do Open Banking do <a href="https://standards.openbanking.org.uk/api-specifications/" target="_blank">Reino Unido</a> e <a href="https://consumerdatastandardsaustralia.github.io/standards/" target="_blank">Austrália</a>, com as devidas adaptações ao cenário bancário brasileiro.</p>
 <h1 id='padroes'>Padrões</h1>
@@ -2733,6 +2742,7 @@ A informação de quais possibilidades estarão disponíveis (<em>query paramete
         </span><span class="p">{</span><span class="w">
           </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Empresa A1"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"45086338000178"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"urlComplementaryList"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://empresadaorganizacaoa.com/complementarylist"</span><span class="p">,</span><span class="w">
           </span><span class="nl">"sharedAutomatedTellerMachines"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
               </span><span class="nl">"identification"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2740,10 +2750,18 @@ A informação de quais possibilidades estarão disponíveis (<em>query paramete
               </span><span class="p">},</span><span class="w">
               </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                 </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Av Naburo Ykesaki, 1270"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fundos"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"districtName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Centro"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"townName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marília"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"ibgeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3515890"</span><span class="w">
                 </span><span class="nl">"countrySubDivision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="p">,</span><span class="w">
-                </span><span class="nl">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17500001"</span><span class="w">
+                </span><span class="nl">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17500001"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brasil"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"countryCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRA"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"geographicCoordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                   </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-90.8365180"</span><span class="p">,</span><span class="w">
+                   </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-180.836519"</span><span class="w">
+                 </span><span class="p">}</span><span class="w">
               </span><span class="p">},</span><span class="w">
               </span><span class="nl">"availability"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                 </span><span class="nl">"standards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -12677,10 +12695,18 @@ Segundo o Art. 6º  da Instrução Normativa nº 32 BCB, de 2020: “O compartil
               </span><span class="p">},</span><span class="w">
               </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                 </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"districtName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"townName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"ibgeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"countrySubDivision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-                </span><span class="nl">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+                </span><span class="nl">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"countryCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"geographicCoordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                  </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
               </span><span class="p">},</span><span class="w">
               </span><span class="nl">"availability"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                 </span><span class="nl">"standards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -12696,13 +12722,15 @@ Segundo o Art. 6º  da Instrução Normativa nº 32 BCB, de 2020: “O compartil
               </span><span class="nl">"services"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                 </span><span class="p">{</span><span class="w">
                   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-                  </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+                  </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
                 </span><span class="p">}</span><span class="w">
               </span><span class="p">]</span><span class="w">
             </span><span class="p">}</span><span class="w">
           </span><span class="p">],</span><span class="w">
           </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+          </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"urlComplementaryList"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -12739,7 +12767,7 @@ Segundo o Art. 6º  da Instrução Normativa nº 32 BCB, de 2020: “O compartil
 <tr>
 <td style="text-align: left">» brand</td>
 <td style="text-align: left"><a href="#schemaSharedAutomatedTellerMachinesBrand">SharedAutomatedTellerMachinesBrand</a></td>
-<td>Sim</td>
+<td>Não</td>
 <td>Nome da marca selecionada pela Organização.</td>
 </tr>
 <tr>
@@ -12771,10 +12799,18 @@ Segundo o Art. 6º  da Instrução Normativa nº 32 BCB, de 2020: “O compartil
           </span><span class="p">},</span><span class="w">
           </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"districtName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"townName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"ibgeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
             </span><span class="nl">"countrySubDivision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+            </span><span class="nl">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"countryCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"geographicCoordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
           </span><span class="p">},</span><span class="w">
           </span><span class="nl">"availability"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="nl">"standards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -12790,13 +12826,15 @@ Segundo o Art. 6º  da Instrução Normativa nº 32 BCB, de 2020: “O compartil
           </span><span class="nl">"services"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
               </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-              </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+              </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
             </span><span class="p">}</span><span class="w">
           </span><span class="p">]</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">],</span><span class="w">
       </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"urlComplementaryList"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -12814,13 +12852,13 @@ Segundo o Art. 6º  da Instrução Normativa nº 32 BCB, de 2020: “O compartil
 <tr>
 <td style="text-align: left">name</td>
 <td style="text-align: left">string</td>
-<td style="text-align: left">Sim</td>
+<td style="text-align: left">Não</td>
 <td style="text-align: left">Nome da marca selecionada pela Organização.</td>
 </tr>
 <tr>
 <td style="text-align: left">companies</td>
 <td style="text-align: left">[<a href="#schemaSharedAutomatedTellerMachinesCompanies">SharedAutomatedTellerMachinesCompanies</a>]</td>
-<td style="text-align: left">Sim</td>
+<td style="text-align: left">Não</td>
 <td style="text-align: left">Lista de instituições pertencentes à marca</td>
 </tr>
 </tbody></table>
@@ -12837,10 +12875,18 @@ Segundo o Art. 6º  da Instrução Normativa nº 32 BCB, de 2020: “O compartil
       </span><span class="p">},</span><span class="w">
       </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"districtName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"townName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"ibgeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"countrySubDivision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+        </span><span class="nl">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"countryCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"geographicCoordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="nl">"availability"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"standards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -12856,13 +12902,15 @@ Segundo o Art. 6º  da Instrução Normativa nº 32 BCB, de 2020: “O compartil
       </span><span class="nl">"services"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
           </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+          </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+  </span><span class="nl">"cnpjNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"urlComplementaryList"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre></div><h3 id='api-admin-sharedautomatedtellermachinescompanies-properties'>Properties</h3>
@@ -12870,15 +12918,33 @@ Segundo o Art. 6º  da Instrução Normativa nº 32 BCB, de 2020: “O compartil
 <tr>
 <th style="text-align: left">Nome</th>
 <th style="text-align: left">Tipo</th>
-<th style="text-align: left">Required</th>
-<th style="text-align: left">Description</th>
+<th style="text-align: left">Obrigatório</th>
+<th style="text-align: left">Descrição</th>
 </tr>
 </thead><tbody>
 <tr>
 <td style="text-align: left">sharedAutomatedTellerMachines</td>
 <td style="text-align: left">[<a href="#schemaSharedAutomatedTellerMachines">SharedAutomatedTellerMachines</a>]</td>
-<td style="text-align: left">Sim</td>
+<td style="text-align: left">Não</td>
 <td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">name</td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">Não</td>
+<td style="text-align: left">Nome da Instituição, pertencente à Marca.</td>
+</tr>
+<tr>
+<td style="text-align: left">cnpjNumber</td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">Não</td>
+<td style="text-align: left">Número completo do CNPJ da instituição.</td>
+</tr>
+<tr>
+<td style="text-align: left">urlComplementaryList</td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">Não</td>
+<td style="text-align: left">URL de link para lista complementar com os nomes e CNPJs agrupados para o caso instituições ofertantes de produtos e serviços com as mesmas características.</td>
 </tr>
 </tbody></table>
 <h2 id='api-admin-sharedautomatedtellermachines'>SharedAutomatedTellerMachines</h2>
@@ -12889,10 +12955,18 @@ Segundo o Art. 6º  da Instrução Normativa nº 32 BCB, de 2020: “O compartil
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"districtName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"townName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ibgeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"countrySubDivision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+    </span><span class="nl">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"countryCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"geographicCoordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"availability"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"standards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -12908,7 +12982,8 @@ Segundo o Art. 6º  da Instrução Normativa nº 32 BCB, de 2020: “O compartil
   </span><span class="nl">"services"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -12930,7 +13005,7 @@ Segundo o Art. 6º  da Instrução Normativa nº 32 BCB, de 2020: “O compartil
 </tr>
 <tr>
 <td style="text-align: left">address</td>
-<td style="text-align: left"><a href="#schemaPostalAddress">PostalAddress</a></td>
+<td style="text-align: left"><a href="#schemaSharedAutomatedTellerMachinesPostalAddress">PostalAddress</a></td>
 <td style="text-align: left">Não</td>
 <td style="text-align: left"></td>
 </tr>
@@ -12970,13 +13045,111 @@ Segundo o Art. 6º  da Instrução Normativa nº 32 BCB, de 2020: “O compartil
 </tr>
 </tbody></table>
 
-<h2 id='api-admin-sharedautomatedtellermachinesservices'>SharedAutomatedTellerMachinesServices</h2>
+<h2 id='api-admin-sharedautomatedtellermachinespostaladdress'>SharedAutomatedTellerMachinesPostalAddress</h2>
 
-<p><a id="schemaSharedAutomatedTellerMachinesServices"></a></p>
+<p><a id="schemaSharedAutomatedTellerMachinesPostalAddress"></a></p>
 
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"districtName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"townName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"ibgeCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"countrySubDivision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"postCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"countryCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"geographicCoordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Nome</th>
+<th style="text-align: left">Tipo</th>
+<th style="text-align: left">Obrigatório</th>
+<th style="text-align: left">Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">address</td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">Não</td>
+<td style="text-align: left">Informação referente ao endereço da máquina compartilhada de autoatendimento</td>
+</tr>
+<tr>
+<td style="text-align: left">additionalInfo</td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">Não</td>
+<td style="text-align: left">Complemento</td>
+</tr>
+<tr>
+<td style="text-align: left">districtName</td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">Não</td>
+<td style="text-align: left">Bairro</td>
+</tr>
+<tr>
+<td style="text-align: left">townName</td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">Não</td>
+<td style="text-align: left">Cidade</td>
+</tr>
+<tr>
+<td style="text-align: left">ibgeCode</td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">Não</td>
+<td style="text-align: left">Código IBGE do município</td>
+</tr>
+<tr>
+<td style="text-align: left">countrySubDivision</td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">Não</td>
+<td style="text-align: left">Estado</td>
+</tr>
+<tr>
+<td style="text-align: left">postCode</td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">Não</td>
+<td style="text-align: left">CEP</td>
+</tr>
+<tr>
+<td style="text-align: left">country</td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">Não</td>
+<td style="text-align: left">País</td>
+</tr>
+<tr>
+<td style="text-align: left">countryCode</td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">Não</td>
+<td style="text-align: left">Código do país</td>
+</tr>
+<tr>
+<td style="text-align: left">geographicCoordinates</td>
+<td style="text-align: left"><a href="#schemaGeographicCoordinates">GeographicCoordinates</a></td>
+<td style="text-align: left">Não</td>
+<td style="text-align: left">Informação referente a geolocalização da máquina compartilhada de autoatendimento</td>
+</tr>
+</tbody></table>
+
+<h2 id='api-admin-geographiccoordinates'>GeographicCoordinates</h2>
+
+<p><a id="schemaGeographicCoordinates"></a></p>
+
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h2 id='api-admin-sharedautomatedtellermachinesservices'>SharedAutomatedTellerMachinesServices</h2>
+<p><a id="schemaSharedAutomatedTellerMachinesServices"></a></p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+  </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 
@@ -12999,6 +13172,12 @@ Segundo o Art. 6º  da Instrução Normativa nº 32 BCB, de 2020: “O compartil
 <td style="text-align: left">[<a href="#schemaEnumSharedAutomatedTellerMachinesServicesCodes">Enum BankingAgentsServicesCodes</a>]</td>
 <td style="text-align: left">Não</td>
 <td style="text-align: left">Lista com os códigos de serviços prestados.</td>
+</tr>
+<tr>
+<td style="text-align: left">additionalInfo</td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">Não</td>
+<td style="text-align: left">Texto livre para complementar informação relativa ao Serviço disponível, quando for preenchida a opção &#39;OUTROS_PRODUTOS_SERVICOS&#39;</td>
 </tr>
 </tbody></table>
 
@@ -24978,6 +25157,7 @@ Segundo o Art. 6º  da Instrução Normativa nº 32 BCB, de 2020: “O compartil
 
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"additionalInfo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"districtName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"townName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"countrySubDivision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
@@ -24997,7 +25177,13 @@ Segundo o Art. 6º  da Instrução Normativa nº 32 BCB, de 2020: “O compartil
 <td style="text-align: left">address</td>
 <td style="text-align: left">string</td>
 <td style="text-align: left">Sim</td>
-<td style="text-align: left">Informação referente ao endereço do terminal compartilhado de atendimento</td>
+<td style="text-align: left">Informação referente ao endereço</td>
+</tr>
+<tr>
+<td style="text-align: left">additionalInfo</td>
+<td style="text-align: left">string</td>
+<td style="text-align: left">Não</td>
+<td style="text-align: left">Complemento</td>
 </tr>
 <tr>
 <td style="text-align: left">districtName</td>
@@ -25866,6 +26052,8 @@ Espera-se que o detentor dos dados garanta que a medição do tempo de resposta 
 <p>Nota: Os exemplos contidos neste anexo são meramente ilustrativos e não refletem as APIs definidas nas especificações do Open Banking. </p>
 
 <p>Ele poderá ser acessado clicando <a href='documents/guia_versionamento.pdf' target="_blank">aqui</a>.</p>
+<h1 id='suporte'>Suporte</h1>
+<p>Fale conosco enviando sua dúvida ou problema através do site: <a href="https://openbankingbrasil.github.io/suporte">https://openbankingbrasil.github.io/suporte</a></p>
 
       </div>
       <div class="dark-box">
